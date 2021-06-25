@@ -1,0 +1,12 @@
+/* 태그선택자 */
+input {
+  background-color: yellow;
+}
+/* 클래스 선택자 */
+.qqq {
+  background-color: skyblue;
+}
+/* 아이디 선택자 */
+#www {
+  background-color: green;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>Game</title>
+  <link rel="stylesheet" href="/cyworld/styles/game.css">
+  <script>
+    function startWord () {
+      const word = document.getElementById('word').innerText  // 코드캠프
+      const lastword = word[word.length - 1]  // 프
+
+      const myword = document.getElementById('myword').value // 프랑스
+      const firstword = myword[0]
+
+      if (lastword === firstword) {
+        // 정답일 때 쓰는 곳
+        document.getElementById('result').innerText = '정답입니다!'
+        // const result = document.getElementById('result').innerText = '정답입니다!'
+      } else {
+        document.getElementById('result').innerText = '오답입니다!'
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="wrapper__header">
+      <span class="title">GAME</span>
+      <span class="subtitle">TODAY CHOICE</span>
+    </div>
+    <div class="wrapper__word">
+      <div class="wrapper__word__header">
+        <img src="images/word.png" alt="">
+        <div class="title">끝말잇기</div>
+        <div id="word" class="word">제시어 : 코드캠프</div>
+      </div>
+      <div class="wrapper__word__body">
+        <input id="myword" type="text" placeholder="단어를 입력하세요.">
+        <button onclick="startWord()"class="search">검색</button>
+      </div>
+      <div id="result" class="wrapper__word__footer">결과!</div>
+    </div>
+    <div class="wrapper__lotto">
+      <div class="wrapper__lotto__header">
+        <img src="images/lotto.png" alt="">
+        <div class="lotto">LOTTO</div>
+        <div class="button">버튼을 누르세요.</div>
+      </div>
+      <div class="wrapper__lotto__body">
+        <div class="box">3 5 10 24 30 34</div>
+      </div>
+      <div class="wrapper__lotto__footer">
+        <button>Button</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
